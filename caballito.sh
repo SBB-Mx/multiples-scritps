@@ -2,7 +2,7 @@
 #echo "" > salidashodan.txt
 while read y
 do
-        echo "la ip es" $y #>>> unilog.txt
+        #echo "la ip es" $y >> unilog.txt
         #touch unicorn/Ip_$y
-        sudo unicornscan -msf -l unilog.txt $y
-done<shodanips.txt
+        sudo unicornscan -msf -l unicorn/Ip_$y.txt $y
+done<ips.txt
